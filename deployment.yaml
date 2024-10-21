@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gradle17-cd
+  labels:
+    app: gradle17-cd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gradle17-cd
+  template:
+    metadata:
+      labels:
+        app: gradle17-cd
+    spec:
+      containers:
+        - name: gradle17-container
+          image: neathtan/gradle17_clone:0
+          ports:
+            - containerPort: 8081
