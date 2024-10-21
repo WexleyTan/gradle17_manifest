@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gradle21-cd
+  name: gradle17-cd
   namespace: argocd
 spec:
   project: default
