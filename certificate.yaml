@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: gradle17-cd-certificate
+  namespace: gradle17
+spec:
+  secretName: gradle17-cd-secret-tls
+  commonName: hort.neath.beauty
+  dnsNames:
+  - hort.neath.beauty
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
