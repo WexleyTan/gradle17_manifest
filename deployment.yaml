@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: gradle17-container
-          image: neathtan/gradle17_clone:6
+          image: neathtan/gradle17_clone:7
           ports:
             - containerPort: 8081
