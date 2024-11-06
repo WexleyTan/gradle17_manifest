@@ -5,9 +5,9 @@ metadata:
   namespace: gradle17
 spec:
   secretName: gradle17-cd-secret-tls
-  commonName: hort.neath.beauty
+  commonName: alert-gradle.tinhlgkiddy.fun
   dnsNames:
-  - hort.neath.beauty
+  - alert-gradle.tinhlgkiddy.fun
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
