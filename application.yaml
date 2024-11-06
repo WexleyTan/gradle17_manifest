@@ -1,8 +1,13 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: gradle17-cd
   namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.telegram: "-1002402792382"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
@@ -16,6 +21,10 @@ spec:
     automated:
       prune: true
       selfHeal: true
+      allowEmpty: false
     syncOptions:
+      - Validate=true
       - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
   revisionHistoryLimit: 2
